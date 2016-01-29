@@ -1,0 +1,224 @@
+
+/* ==========================================================================
+   Typo
+   ========================================================================== */
+
+
+
+/* Sets up that Base 10 stuff  1rem = 10px
+   ========================================================================== */
+html {
+  font-size: 62.5%;
+  line-height: 22px;
+  font-feature-settings: "liga", "dlig";
+  -webkit-font-smoothing: antialiased;
+}
+
+p { line-height: 26px; }
+
+
+
+
+
+
+
+
+
+/* Font Face
+   ========================================================================== */
+@font-face {
+  font-family: 'ralewaymedium';
+  src: url('fonts/raleway/Raleway-Medium-webfont.eot');
+  src: url('fonts/raleway/Raleway-Medium-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/raleway/Raleway-Medium-webfont.woff2') format('woff2'),
+       url('fonts/raleway/Raleway-Medium-webfont.woff') format('woff'),
+       url('fonts/raleway/Raleway-Medium-webfont.ttf') format('truetype'),
+       url('fonts/raleway/Raleway-Medium-webfont.svg#ralewaymedium') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'ralewayregular';
+  src: url('fonts/raleway/Raleway-Regular-webfont.eot');
+  src: url('fonts/raleway/Raleway-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+       url('fonts/raleway/Raleway-Regular-webfont.woff2') format('woff2'),
+       url('fonts/raleway/Raleway-Regular-webfont.woff') format('woff'),
+       url('fonts/raleway/Raleway-Regular-webfont.ttf') format('truetype'),
+       url('fonts/raleway/Raleway-Regular-webfont.svg#ralewayregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+@font-face {
+  font-family: 'PlantinMTStd-Regular';
+  src: url('fonts/plantin/plantin.eot');
+  src: url('fonts/plantin/plantin.eot?#iefix') format('embedded-opentype'),
+       url('fonts/plantin/plantin.woff2') format('woff2'),
+       url('fonts/plantin/plantin.woff') format('woff'),
+       url('fonts/plantin/plantin.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Font-Family, font-size and so on
+   ========================================================================== */ 
+html, body { 
+  font-family: 'PlantinMTStd-Regular', serif; 
+  font-weight: 400;
+}
+
+body { 
+  @include font-size(1.6); 
+  color: $color-3;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  //font-family: 'ralewayregular';
+  font-weight: 400;
+  text-transform: capitalize;
+  line-height: 1.2;   
+}
+
+.main-nav__ul {
+  font-family: 'ralewaymedium';
+  @include font-size(1.6);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.button-gold {
+  font-family: 'ralewaymedium';
+  @include font-size(1.4);
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.button-dark {
+  font-family: 'ralewaymedium';
+  text-transform: uppercase;
+  font-weight: 500; 
+}
+
+.button-light {
+  font-family: 'ralewaymedium';
+  text-transform: uppercase;
+  font-weight: 500; 
+}
+
+.social-icons {
+  @include font-size(3.4);  
+}
+
+.footer-nav-menu {
+  font-family: 'ralewayregular';
+  @include font-size(1.4);
+  font-weight: 400;
+  text-transform: uppercase;  
+}
+
+.ignite-credit {
+  font-family: 'PlantinMTStd-Regular';
+  @include font-size(1.2);
+  font-weight: 400;
+}
+
+.slider-aside__title {
+  font-family: 'ralewayregular';
+  @include font-size(2.6);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.tel-active,
+.tel-read-only,
+.contact-details-address {
+  @include font-size(2.2);
+  font-weight: 400;
+  line-height: 30px; 
+}
+.contact-details-address a{
+  text-decoration:none;
+}
+
+
+.magicBox__title {
+  font-family: 'ralewayregular';
+  @include font-size(3);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.magicBox__copy {
+  line-height: 1.5;
+}
+
+
+.newsLetter__title,
+.eventEnquiry__title {  
+  font-family: 'ralewayregular';
+  @include font-size(2.3);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+.newsL__blok label,
+.newsL__blok input,
+.wpcf7 p,
+.wpcf7-submit {
+  font-family: 'ralewayregular'; 
+  @include font-size(1.6);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 2;
+}
+
+
+.page-title {
+  font-family: 'ralewayregular'; 
+  @include font-size(2.6);
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 1.2;
+}
+
+
+
+
+
+/* About Page -- Square with copy
+   ========================================================================== */
+@include max-screen(53.125em) {
+  .aboutBox__title { @include font-size(2.5); }
+  .aboutBox__copy { @include font-size(1.4); }
+}
+
+
+
+
+
+/* Find Us -- to avoid email to break in 2 lines
+   ========================================================================== */
+@include max-screen(28.125em) {
+  [href^=mailto]:not(.button-dark) { @include font-size(1.4); }
+}
+
